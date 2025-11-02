@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel Estadístico Futurista</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="menu">
+      <button class="menu-btn activa" data-target="GENERAR_CONJUNTO_DE_DATOS">GENERAR CONJUNTO DE DATOS</button>
+      <button class="menu-btn" data-target="ANOVA">ANOVA</button>
+      <button class="menu-btn" data-target="XI_CUADRADO">XI CUADRADO</button>
+      <button class="menu-btn" data-target="COMPONENTES_PRINCIPALES">COMPONENTES PRINCIPALES</button>
+      <button class="menu-btn" data-target="COEFICIENTES_RELACION">COEFICIENTES DE RELACIÓN</button>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+    <!-- ===== GENERAR DATOS ===== -->
+    <section id="GENERAR_CONJUNTO_DE_DATOS" class="pagina activa">
+      <div class="contenido">
+        <h1>Generar Conjunto de Datos</h1>
+        <p>Genera un conjunto de datos aleatorio para las pruebas estadísticas.</p>
+        <button id="generarDatosBtn">Generar Datos</button>
+        <div id="tablaDatos"></div>
+        <canvas id="graficaGenerados" height="120"></canvas>
+      </div>
+    </section>
+
+    <!-- ===== ANOVA ===== -->
+    <section id="ANOVA" class="pagina">
+      <div class="contenido">
+        <h1>ANOVA</h1>
+        <div id="anovaResultado">⚙️ Esperando datos...</div>
+        <canvas id="graficaAnova" height="120"></canvas>
+      </div>
+    </section>
+
+    <!-- ===== XI CUADRADO ===== -->
+    <section id="XI_CUADRADO" class="pagina">
+      <div class="contenido">
+        <h1>Xi Cuadrado</h1>
+        <div id="chiResultado">⚙️ Esperando datos...</div>
+        <canvas id="graficaChi" height="120"></canvas>
+      </div>
+    </section>
+
+    <!-- ===== COMPONENTES PRINCIPALES ===== -->
+    <section id="COMPONENTES_PRINCIPALES" class="pagina">
+      <div class="contenido">
+        <h1>Componentes Principales (PCA)</h1>
+        <div id="pcaResultado">⚙️ Esperando datos...</div>
+        <canvas id="graficaPCA" height="120"></canvas>
+      </div>
+    </section>
+
+    <!-- ===== COEFICIENTES DE RELACIÓN ===== -->
+    <section id="COEFICIENTES_RELACION" class="pagina">
+      <div class="contenido">
+        <h1>Coeficientes de Relación</h1>
+        <div id="corrResultado">⚙️ Esperando datos...</div>
+        <canvas id="graficaCorr" height="120"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
